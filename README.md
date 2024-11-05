@@ -43,27 +43,27 @@ mkdir -p templates/bundles/SyliusAdminBundle/
 cp -R vendor/bluepayment-plugin/sylius-plugin/src/Resources/views/* templates/bundles/
 ```
 6. Przejdź do zakładki Metody płatności
-7. Dodaj nową metodę płatności klikając Utwórz i wybierz metodę Blue Media płatności online
+7. Dodaj nową metodę płatności klikając Utwórz i wybierz metodę Autopay płatności online
 8. Przejdź do konfiguracji modułu
 
 ## Konfiguracja
 ### Konfiguracja podstawowych pól wtyczki
 
-1. Kod – nazwa własna wtyczki, np. Płatności Blue Media
+1. Kod – nazwa własna wtyczki, np. Płatności Autopay
 2. Aktywna? – wybierz TAK lub NIE, żeby określić czy kanał płatności ma być widoczny przy składaniu zamówienia
-3. Kanały – wybierz kanały, dla których powinna się pojawić płatność za pomocą bramki Blue Media
-4. Użyj środowiska testowego – wybierając opcję TAK, sprawisz, że wszystkie płatności będą przekierowywane na testową bramkę płatniczą, która znajduje się pod adresem https://oplacasie-accept.bm.pl. Jeżeli tego nie zrobisz, automatycznie zostanie ustawiona produkcyjna wersja bramki płatniczej, a wszystkie płatności zostaną przekierowane na adres https://oplacasie.bm.pl.
+3. Kanały – wybierz kanały, dla których powinna się pojawić płatność za pomocą bramki Autopay
+4. Użyj środowiska testowego – wybierając opcję TAK, sprawisz, że wszystkie płatności będą przekierowywane na testową bramkę płatniczą, która znajduje się pod adresem https://portal-accept.autopay.eu. Jeżeli tego nie zrobisz, automatycznie zostanie ustawiona produkcyjna wersja bramki płatniczej, a wszystkie płatności zostaną przekierowane na adres https://portal.autopay.eu.
 
     Jeżeli wybierzesz środowisko testowe, moduł nie będzie przetwarzał żadnych faktycznych płatności.
 
-5. Identyfikator serwisu partnera – ma wartość liczbową i jest unikalny dla każdego sklepu (otrzymasz go od Blue Media).
-6. Klucz współdzielony – unikalny klucz przypisany do danego sklepu (otrzymasz go od Blue Media).
+5. Identyfikator serwisu partnera – ma wartość liczbową i jest unikalny dla każdego sklepu (otrzymasz go od Autopay).
+6. Klucz współdzielony – unikalny klucz przypisany do danego sklepu (otrzymasz go od Autopay).
 7. Żeby wyświetlić waluty – zdefiniuj je w zakładce Konfiguracja ➝ Waluty 
 8. Dla wybranych języków dodaj nazwę oraz opis płatności – zostaną one wyświetlone przy składaniu zamówienia.
 
 ### Konfiguracja adresów URL
 
-Upewnij się, że w panelach administracyjnych Blue Media https://oplacasie.bm.pl oraz https://oplacasie-accept.bm.pl poniższe pola zawierają poprawne adresy sklepu:
+Upewnij się, że w panelach administracyjnych Autopay https://portal.autopay.eu/ oraz https://portal-accept.autopay.eu poniższe pola zawierają poprawne adresy sklepu:
 
 -	adres powrotu do płatności
 	https://domena-sklepu.pl/bluepayment/payment/back
